@@ -1,0 +1,36 @@
+<head>
+
+  <style>
+    canvas{
+    }
+  </style>
+</head>
+
+<h1>Home</h1>
+
+  <table id="display-table">
+    <thead>
+      <tr id="display-table">
+        <th id="display-table">Account</th>
+        <th id="display-table">Number</th>
+        <th id="display-table">Balance</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat='account in accounts' id="display-table">
+        <td id="display-table">{{account.accountNickname}}</td>
+        <td id="display-table">{{account.accountNumber}}</td>
+        <td id="display-table"><a href='#/history/{{account.accountNumber}}'>{{account.accountBalance}}</a></td>
+      </tr>
+      <tr class="blue-text bold-text" id="display-table">
+          <td id="display-table">Total Assets</td>
+          <td id="display-table"></td>
+          <td id="display-table">{{totalAssets}}</td>
+      <tr>
+    </tbody>
+  </table>
+
+  <p>
+      <canvas id="pieCanvas" height="225" width="300"></canvas>
+      <canvas id="barCanvas" height="225" width="200"></canvas>
+  </p>

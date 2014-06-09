@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html ng-app="demoApp">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name = "viewport" content = "initial-scale = 1, user-scalable = no">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf8"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <link rel="shortcut icon" href="./img/favicon.ico"/>
+
+
+    <!--  This tag is for usemin to strip out the expanded JS includes -->
+    <!-- build:css css/angular-demo.min.css -->
+    <link href="css/demo-sample.css" rel="stylesheet"/>
+    <!-- endbuild -->
+
+    <link href="css/ng-modal.css" rel="stylesheet"/>
+
+    <title>Demo Sample - Main Page</title>
+
+  </head>
+  <body id="target" class='page-left-justified'>
+
+    <script src='http://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js'></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-route.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-touch.min.js"></script>
+    <script src='lib/ng-modal.min.js'></script>
+
+    <script type="text/javascript" src="lib/Chart.min.js"></script>
+
+    <!--  include the global configuration file -->
+    <script type="text/javascript" src='config/GlobalConfig.js'></script>
+
+    <!-- load after angular -->
+    <!-- build:js angular-demo.min.js -->
+    <script src='demoApp.js'></script>
+    <script src='routes/demoRoutes.js'></script>
+      <script src='view/404/404Controller.js'></script>
+      <script src='view/navigation/NavigationController.js'></script>
+      <script src='view/home/HomeController.js'></script>
+      <script src='view/about/AboutController.js'></script>
+      <script src='view/history/HistoryController.js'></script>
+      <script src='view/transfers/TransfersController.js'></script>
+      <script src='view/test/TestController.js'></script>
+      <script src='view/bind/BindDemoController.js'></script>
+      <script src='view/ajax/AjaxDemoController.js'></script>
+    <script src='directives/DemoNavigation.js'></script>
+    <script src='model/AccountModel.js'></script>
+    <script src='model/UserModel.js'></script>
+    <script src='model/BindDemoModel.js'></script>
+    <script src='model/EndpointModel.js'></script>
+    <script src='model/NavigationModel.js'></script>
+    <script src='services/StorageService.js'></script>
+    <script src='ajax/SearchWeather.js'></script>
+    <script src='ajax/AccountSummary.js'></script>
+    <!-- endbuild -->
+
+    <!-- MAIN CONTENT AND INJECTED VIEWS -->
+    <div id="main">
+      <div demo-navigation></div>
+      <div ng-view></div>
+    </div>
+
+	</body>
+</html>
+
+
+

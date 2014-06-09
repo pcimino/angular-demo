@@ -1,0 +1,123 @@
+.page-left-justified {
+  margin-left:10%;
+}
+.blue-text {
+  color:#1a16ff;
+}
+.bold-text {
+  font-weight:900;
+}
+#nav-wrapper {
+  width:60%;
+  padding:20px 0;
+  background:#ffffff;
+}
+
+ul#nav {
+  font-family: Verdana;
+  font-size:14px;
+  list-style:none;
+  margin:0 auto;
+  padding:0;
+  width:100%;
+  overflow: auto;
+}
+
+ul#nav li {
+  display:inline;
+}
+
+ul#nav li a {
+  text-decoration:none;
+  display: block;
+  padding:5px 21px;
+  background:#777777;
+  color:#eee;
+  float:left;
+  text-align:center;
+  border-top:2px solid #999999;
+  border-right:2px solid #999999;
+  border-bottom:2px solid #999999;
+  border-left:2px solid #999999;
+}
+
+ul#nav li a:hover {
+  background:#555555;
+  color:#000;
+  border-top:2px solid #ffffff;
+  border-right:2px solid #ffffff;
+  border-bottom:2px solid #ffffff;
+  border-left:2px solid #ffffff;
+}
+
+table#display-table
+{
+  width:40%;
+  border:1px solid #aaaaaa;
+}
+th#display-table
+{
+  background-color:#777777;
+  color:white;
+  font-size: 18px;
+  border:1px solid #aaaaaa;
+}
+td#display-table
+{
+  font-size: 14px;
+  padding:3px;
+  text-align:center;
+  border:1px solid #aaaaaa;
+}
+
+
+label
+{
+  font-weight:900;
+  width:40%;
+}
+
+/*-------------------------
+	The menu
+--------------------------*/
+
+nav{
+	display:inline-block;
+	margin:60px auto 45px;
+	background-color:#5597b4;
+	box-shadow:0 1px 1px #ccc;
+	border-radius:2px;
+}
+
+nav a{
+	display:inline-block;
+	padding: 18px 30px;
+	color:#fff !important;
+	font-weight:bold;
+	font-size:16px;
+	text-decoration:none !important;
+	line-height:1;
+	text-transform: uppercase;
+	background-color:transparent;
+
+	-webkit-transition:background-color 0.25s;
+	-moz-transition:background-color 0.25s;
+	transition:background-color 0.25s;
+}
+
+nav a:first-child{
+	border-radius:2px 0 0 2px;
+}
+
+nav a:last-child{
+	border-radius:0 2px 2px 0;
+}
+
+nav.home .home,
+nav.transfers .transfers,
+nav.bind .bind,
+nav.test .test,
+nav.ajax .ajax,
+nav.about .about{
+	background-color:#aaaaaa;
+}

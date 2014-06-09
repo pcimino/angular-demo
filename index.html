@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name = "viewport" content = "initial-scale = 1, user-scalable = no">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf8"/>
+
+    <link rel="shortcut icon" href="./build/img/favicon.ico"/>
+
+    <title>NSB Sample - Index check for HTML5</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+
+                document.write('<H1>Make sure the demo app server "npm start" is running.</h1>');
+                document.write("<hr><p><a href='./src/index.html'>Click here for debugging from the source directory</a></p>");
+                document.write("<p><a href='./target/target-app/index.html'>Click here for running from the deployment directory</a></p><hr>");
+
+                document.write("<p>Redirecting to the target directory in <span id='remaining'>10</span> seconds.</p>");
+
+                document.write("<hr><h4>Preferred Development Process</h4>");
+                document.write("<p>Run the project build continuously (grunt deploy)</p>");
+                document.write("<p>And debug using the /target directory</p>");
+
+                var countDown = 10;
+                var countDownRef;
+                var remaining = document.getElementById('remaining');
+                var countDownFunc = function() {
+                  if (countDown > 0) {
+                    countDown--;
+                    remaining.textContent = countDown;
+                  } else {
+                    window.clearInterval(countDownRef);
+                    window.location.href = "/target/target-app";
+                  }
+                }
+                countDownRef = window.setInterval(function() {countDownFunc();}, 1000);
+
+        </script>
+    </body>
+</html>

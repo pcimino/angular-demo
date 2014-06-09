@@ -1,0 +1,148 @@
+/*jshint globalstrict: true*/
+'use strict';
+
+describe('Testing the LoginController', function() {
+    // define variables in scope for this test suite
+    var $rootScope, $controller, $location, $http;
+    var mockScope;
+
+    // these are used to mock http requests
+    var $http, $httpBackend;
+
+    // modules used in this test suite
+    var testController, userModel, storageService;
+
+    // test data
+    var testUsername = "testUsername";
+    var testPassword = "testPassword";
+    var testURL = "/nsb-app/UserValidation/credentials?username="+testUsername+"&password="+testPassword;
+
+    // Runs before each it() function
+    // These calls load the modules required for this test
+    beforeEach(function() {
+        // alternatively could get the app itself: module('nsbApp');
+        // the downside to creating the app,  other modules we're not using will also be created in memory
+        module('ControllerModule');
+        module('ModelModule');
+        module('NSBServiceModule');
+    });
+/*
+    // Create mocks and setup controller, data
+    beforeEach(inject(function($injector) {
+        $rootScope = $injector.get('$rootScope');
+
+        // used to instantiate controllers
+        $controller =  $injector.get('$controller');
+
+        // location service used to handle navigation paths
+        $location = $injector.get('$location');
+
+        // handle http requests
+        $http = $injector.get('$http');
+        $httpBackend = $injector.get('$httpBackend');
+
+        mockScope = $rootScope.$new();
+
+        userModel = $injector.get('UserModel');
+        storageService = $injector.get('StorageService');
+
+        // instantiate a model and service used by LoginController
+        userModel = $injector.get('UserModel');
+        storageService = $injector.get('StorageService');
+
+        // setup data in the mock scope
+        mockScope.username = testUsername;
+        mockScope.password = testPassword;
+        mockScope.myData = {};
+
+        // reset user data
+        storageService.setUser({});
+
+        // build an instance of the controller
+        testController = $controller('LoginController', {
+            $scope:mockScope, $http:$http, $location:$location, UserModel:userModel, StorageService:storageService
+        });
+    }));
+
+    // verify http requests have been cleared
+    afterEach(function() {
+        $httpBackend.verifyNoOutstandingExpectation();
+        $httpBackend.verifyNoOutstandingRequest();
+    });
+
+    // verify the controller, model and service were created
+    it('Should have created the LoginController', function() {
+        expect(testController).toBeDefined();
+        expect(userModel).toBeDefined();
+        expect(storageService).toBeDefined();
+    });
+
+    // verify the http SUCCESS call
+    it('Should call the GET with valid data and get to the home page', function() {
+        // expect the mock to be called with GET, and respond with true to indicate the
+        // server validated the data
+        $httpBackend.expect("GET", testURL).respond(true);
+
+        // verify the getUser() gets called
+        spyOn(userModel, "getUser").andCallThrough();
+
+        // call function on the controller
+        mockScope.myData.doClick();
+
+        // flush the http requests
+        $httpBackend.flush();
+
+        // check results
+        // the userObj should be in scope and have the correct value
+        expect(mockScope.userObj.displayName).toEqual(testUsername);
+        expect(userModel.getUser).toHaveBeenCalled();
+
+        // also check the object in storage
+        var userStoreObj = storageService.getUser();
+        expect(userStoreObj).toBeDefined();
+        expect(userStoreObj.displayName).toEqual(testUsername);
+
+        // verify the path has been updated to go to the main page after successful login
+        expect($location.path()).toEqual("/home");
+    });
+
+    // verify the http SUCCESS call with bad data
+    it('Should call the GET with bad data and stay on the login page', function() {
+        // respond with false to indicated invalid data
+        $httpBackend.expect("GET", testURL).respond(false);
+
+        mockScope.myData.doClick();
+
+        $httpBackend.flush();
+
+        expect(mockScope.userObj).not.toBeDefined();
+
+        var userStoreObj = storageService.getUser();
+        expect(userStoreObj).toBeDefined();
+        expect(userStoreObj.displayName).not.toBeDefined();
+
+        expect($location.path()).toEqual("");
+    });
+
+
+    // verify the http error scenario
+    it('Should call the GET and respond with an error', function() {
+        // respond with a status to indicate error condition
+        $httpBackend.expect("GET", testURL).respond(500, '');
+
+        mockScope.myData.doClick();
+
+        $httpBackend.flush();
+
+        expect(mockScope.userObj).not.toBeDefined();
+
+        var userStoreObj = storageService.getUser();
+        expect(userStoreObj).toBeDefined();
+        expect(userStoreObj.displayName).not.toBeDefined();
+
+        expect($location.path()).toEqual("");
+    });
+    */
+});
+
+

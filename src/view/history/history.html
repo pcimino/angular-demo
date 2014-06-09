@@ -1,0 +1,24 @@
+<div>
+  <h2>Transaction History Page</h2>
+
+  <div style="font-size: 18px;">{{account.nickname}} ${{account.balance}} </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>From</th>
+        <th>To</th>
+        <th>Amount</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="transaction in account.transactions">
+        <td>{{transaction.fromAccountName}}</td>
+        <td>{{transaction.toAccountName}}</td>
+        <td>${{transaction.amount}}</td>
+        <td>{{ transaction.date | date : 'MM/dd/yyyy @ h:mma'}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div

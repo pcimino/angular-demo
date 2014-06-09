@@ -1,0 +1,58 @@
+<h2>About Page</h2>
+<h3>Issues</h3>
+<ul>
+  <li>Why are standard HTML unordered list bullets messed up on this page?</li>
+  <li>The navigation bar is an Angular Directive which can be injected into every page. Why isn't the data added to $scope by the NavigationController available?</li>
+</ul>
+<h3>Tools</h3>
+<ul>
+  <li>Angular is an open source, community supported Google project</li>
+  <li>Cygwin, include Git modules</li>
+  <li>Access sites will help immensely</li>
+    <ul>
+      <li><a href='http://www.Github.com' target='_blank'>Github.com</a>: Currently blocked, need read access and ability to run 'git pull'</li>
+      <li><a href='http://www.npmjs.org' target='_blank'>npmjs.org</a>: Issue running npm install</li>
+    </ul>
+  <li>IDEs</li>
+    <ul>
+      <li>git: Can be installed as part of cygwin</li>
+        <li>node & npm: <a href='http://www.nodejs.org' target='_blank'>nodejs.org</a></li>
+        <li><a href='http://www.bower.io' target='_blank'>bower</a>: A package manager similar to npm, installs packages from github</li>
+      <li>IDEs: there are various IDEs and eclipse plugins focused on JavaScript. Need to check with UPF and see if they have suggestions.</li>
+      <ul>
+          <li><a href='http://www.spket.com/' target='_blank'>Spket</a>: Comes as an IDE or Eclipse plugin</li>
+          <li><a href='http://www.nodeclipse.org' target='_blank'>Nodeclipse</a>: Eclipse plugin</a></li>
+          <li><a href='http://www.jetbrains.com/' target='_blank'>JetBrains</a>: Very nice but $100</li>
+          <li><a href='http://www.lighttable.com/' target='_blank'>LightTable</a>: Beta, still missing features but light weight</li>
+      </ul>
+    </ul>
+  <li>Unit Testing: Does UPF have a recommendation? Or do we need to do some evaluation?</li>
+    <ul>
+      <li><a href='http://jasmine.github.io' target='_blank'>Jasmine</a></li>
+      <li><a href='http://visionmedia.github.io/mocha/' target='_blank'>Mocha</a></li>
+      <li><a href='https://qunitjs.com/' target='_blank'>QUnit</a></li>
+    </ul>
+<li><a href='http://karma-runner.github.io/0.12/index.html' target='_blank'>Karma</a> is a test runner. Can be configured to continuously and rerun tests as code changes.</li>
+<li>Packaging/Build: <a href='http://gruntjs.com/' target='_blank'>Grunt</a></li>
+</ul>
+<h3>Home Page</h3>
+<ul>
+  <li>List of accounts includes the name, balance and a link to the Transactions page</li>
+  <li>Bar graph displays a maximum of the last 6 transactions for each account</li>
+  <li>Pie graph displays account assets as a percentage<li>
+</ul>
+
+<h3>Flows</h3>
+<ul>
+  <li>Home Page Controller loads sessionStorage and displays accounts and graphs, if empty redirects to the Test Page</li>
+  <li>Home Page account links navigate to the Transaction History for the selected account<li>
+  <li>Transfers Page Controller allows transferring funds from one account to another</li>
+  <li>Test Controller allows the user to reset the data, once reset redirects tot he Home Page</li>
+</ul>
+
+<h3>Storage</h3>
+<ul>
+  <li>Currently uses sessionStorage which clears if the browser (tab) closes</li>
+  <li>Models should be bound via AJAX to a backend server</li>
+  <li>Will need to define the use of session storage, maybe for the user badge, certainly not for account data</li>
+</ul>

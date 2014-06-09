@@ -1,0 +1,19 @@
+<div style="width:75%;">
+	<nav class="{{activeMenuTab}}">
+       <a ng-repeat='link in navigation' href='' class="{{link.class}}" ng-click="menuChange('{{link}}')">{{link.display}}</a>
+	</nav>
+</div>
+
+<div style="display:inline;padding:0px 15px 0px 0px;">
+  Welcome {{user.displayName}}
+</div>
+<div style="display:inline;padding:0px 15px 0px 0px;">
+  <a href='#/test'>Logout {{user.userId}}</a>
+</div>
+<div style="display:inline;padding:0px 15px 0px 0px;width:50%">
+  <select ng-model="navSelection" ng-change="change()">
+      <option ng-repeat='link in navigation' ng-selected='selected' value='{{link}}'>{{link.display}}</option>
+  </select>
+
+</div>
+
