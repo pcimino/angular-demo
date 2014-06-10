@@ -1,6 +1,3 @@
-/*jshint globalstrict: true*/
-'use strict';
-
 angular.module('DemoRoutes', []).config(['$routeProvider', function($routeProvider) {
     'use strict';
   $routeProvider

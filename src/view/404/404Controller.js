@@ -1,7 +1,6 @@
-/*jshint globalstrict: true*/
-'use strict';
 angular.module('ControllerModule').controller('404Controller',
   function ($scope) {
+  'use strict';
     var threshhold = Math.floor(Math.random()*4)+1;
     if (threshhold === 1) {
       $scope.altText =  'Corgi going nowhere fast.';

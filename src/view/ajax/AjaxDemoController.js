@@ -1,5 +1,4 @@
-/*jshint globalstrict: true*/
-'use strict';
+
 angular.module('ControllerModule').controller('AjaxDemoController',
   function ($scope, EndpointModel, SearchWeather) {
     'use strict';

@@ -1,5 +1,4 @@
-/*jshint globalstrict: true*/
-'use strict';
+
 angular.module('ControllerModule').controller('BindDemoController',
   function ($scope, $location, $routeParams, BindDemoModel, StorageService) {
     'use strict';

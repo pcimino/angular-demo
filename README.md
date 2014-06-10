@@ -6,6 +6,12 @@ Package structure is basedon the <a href='https://github.com/angular/angular-see
 
 Install <a href='http://nodejs.org/' target='_blank'>nodejs</a>
 
+## Issues ##
+Ther are a few things I'm still workign on with this project.   
+
+* Having an issue with `bower install`, setting git to se https: instead of git: isn't working, appears to be my local environment
+* The minified version of the code isn't runnign properly. I know I've addressed this smae issue before (but it's getting late)
+
 ### Install Dependencies
 
 We have two kinds of dependencies in this project: tools and angular framework code.  The tools help
@@ -31,6 +37,9 @@ folders in your project.
 
 * `node_modules` - contains the npm packages for the tools we need
 * `bower_components` - contains the angular framework files
+
+If you have issues woth `bower install` you may want to change the default git protocol:  
+`git config --global url."https://".insteadOf git://`
 
 ### Run the Application
 

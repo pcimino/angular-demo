@@ -1,5 +1,3 @@
-/*jshint globalstrict: true*/
-'use strict';
 /*
   Simple get calls to a public API and resturns the response
 

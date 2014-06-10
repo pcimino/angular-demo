@@ -1,5 +1,3 @@
-/*jshint globalstrict: true*/
-'use strict';
 /*
   Data Structure
   {

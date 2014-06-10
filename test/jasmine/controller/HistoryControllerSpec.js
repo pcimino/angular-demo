@@ -42,7 +42,9 @@ describe('Testing the HistoryController', function() {
         // instantiate a model and service used by Controller
         storageService = $injector.get('StorageService');
         accountModel = $injector.get('AccountModel', {StorageService:storageService});
-
+		var dummyAcct = {accountNumber:3, accountType:'save', accountNickname:'nick', accountBalance:'22.34', transactions:[{date:new Date(), fromAccountName:'from', toAccountName:'to', fromAccountNumber:'234', toAccountNumber:'567', amount:'1'}]};
+		accountModel.getAccount = jasmine.createSpy("getAccount() spy").andReturn(dummyAcct);
+		
         // build an instance of the controller
         testController = $controller('HistoryController', {
           $scope:mockScope, $location:$location, $routeParams:$routeParams, AccountModel:accountModel

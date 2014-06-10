@@ -1,5 +1,4 @@
-/*jshint globalstrict: true*/
-'use strict';
+
 angular.module('ControllerModule').controller('TestController',
   function ($scope, $location, AccountModel) {
     'use strict';

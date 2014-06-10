@@ -11,7 +11,7 @@ module.exports = function(grunt) {
      *    build - the temporary working directory
      */
     properties: {
-        app: 'nsbApp',
+        app: 'angular-demo',
         targetDir: 'target/target-app/',
         build: 'build'
     },
@@ -66,10 +66,10 @@ module.exports = function(grunt) {
     cssmin: {
       add_banner: {
         options: {
-          banner: '/* NSB Minified CSS \n<%= meta.banner %> */\n'
+          banner: '/* angular-demo Minified CSS \n<%= meta.banner %> */\n'
         },
         files: {
-          '<%= properties.targetDir %>css/<%= pkg.name %>.min.css': ['src/css/**/*.css', '!src/css/**/nsb-sample.css', '!src/css/**/ie.css', '!src/css/**/account_summary.css']
+          '<%= properties.targetDir %>css/<%= pkg.name %>.min.css': ['src/css/**/*.css', '!src/css/**/demo-sample.css', '!src/css/**/ie.css', '!src/css/**/account_summary.css']
         }
       }
     },

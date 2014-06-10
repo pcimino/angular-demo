@@ -1,4 +1,5 @@
 /*jshint globalstrict: true*/
+/*global window */
 'use strict';
 var demoApp = window.demoApp = angular.module('demoApp',
   [

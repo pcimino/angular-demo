@@ -1,5 +1,3 @@
-/*jshint globalstrict: true*/
-'use strict';
 /*
   Utility service for getting/setting session storage
 

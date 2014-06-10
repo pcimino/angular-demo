@@ -1,5 +1,3 @@
-/*jshint globalstrict: true*/
-'use strict';
 
 angular.module('ControllerModule').controller('TransfersController',
   function ($scope, $location, $routeParams, AccountModel) {

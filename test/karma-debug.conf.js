@@ -1,7 +1,7 @@
 var sharedConfig = require('./karma-shared.conf');
 
 module.exports = function(config) {
-  sharedConfig(config, {testName: 'NSB: debug tests', logFile: 'karma-debug.log'}, ['Chrome']);
+  sharedConfig(config, {testName: 'angular-demo: debug tests', logFile: 'karma-debug.log'}, ['Chrome']);
 
   config.set({
     // level of logging

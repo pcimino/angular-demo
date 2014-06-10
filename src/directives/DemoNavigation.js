@@ -1,7 +1,6 @@
-/*jshint globalstrict: true*/
-'use strict';
+
 angular.module('DirectiveModule').directive('demoNavigation', function() {
-    'use strict';
+'use strict';
   return {
     restrict: 'A',
     templateUrl: 'view/navigation/navigation.html',
