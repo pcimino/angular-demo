@@ -5,6 +5,8 @@ var demoApp = window.demoApp = angular.module('demoApp',
   [
     // Routes
     'ngRoute',
+    'ngTouch',
+    // Routes
     'DemoRoutes',
     // Controllers
     'ControllerModule',
@@ -14,7 +16,6 @@ var demoApp = window.demoApp = angular.module('demoApp',
     'ModelModule',
     // Services
     'DemoServiceModule',
-    'ngTouch',
     // Ajax
     'AjaxModule'
   ]
@@ -24,7 +25,6 @@ var demoApp = window.demoApp = angular.module('demoApp',
 angular.module('ControllerModule', []);
 angular.module('DirectiveModule', []);
 angular.module('ModelModule', []);
-angular.module('AjaxModule', []);
+angular.module('AjaxModule', ['ngRoute']);
 angular.module('DemoServiceModule', []); // ServiceModule is already in use by Angular
-
 

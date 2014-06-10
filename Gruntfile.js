@@ -11,7 +11,7 @@ module.exports = function(grunt) {
      *    build - the temporary working directory
      */
     properties: {
-        app: 'angular-demo',
+        app: 'demoApp',
         targetDir: 'target/target-app/',
         build: 'build'
     },
@@ -69,7 +69,7 @@ module.exports = function(grunt) {
           banner: '/* angular-demo Minified CSS \n<%= meta.banner %> */\n'
         },
         files: {
-          '<%= properties.targetDir %>css/<%= pkg.name %>.min.css': ['src/css/**/*.css', '!src/css/**/demo-sample.css', '!src/css/**/ie.css', '!src/css/**/account_summary.css']
+          '<%= properties.targetDir %>css/<%= pkg.name %>.min.css': ['src/css/**/*.css']
         }
       }
     },
