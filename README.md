@@ -24,6 +24,7 @@ And then
 ```
 npm install
 ```
+
 (On Mac/Linux probably have to use sudo)
 
 Behind the scenes this will also call `bower install`.  You should find that you have two new
@@ -32,9 +33,13 @@ folders in your project.
 * `node_modules` - contains the npm packages for the tools we need
 * `bower_components` - contains the angular framework files
 
-If you have issues woth `bower install` you may want to change the default git protocol:  
+If you have issues with `bower install` you may want to change the default git protocol:  
 `git config --global url."https://".insteadOf git://`
 
+And then rerun
+```
+bower install
+```
 ### Run the Application
 
 Project is configured the project with a simple development web server.  The simplest way to start
