@@ -3,23 +3,23 @@
 
   <table>
       <tr><td style="text-align:right;">
-          <label for='fromAccount'>From:</label>
+          <label for='transferData.fromAccount'>From:</label>
       </td><td style="text-align:left;">
-          <select ng-model="fromAccount">
-            <option ng-repeat="account in accounts" value={{account.accountNumber}}>{{account.accountNickname}}  ${{account.accountBalance}}</option>
+          <select ng-model="transferData.fromAccount">
+            <option ng-repeat="account in transferData.accounts" value={{account.accountNumber}}>{{account.accountNickname}}  ${{account.accountBalance}}</option>
           </select>
       </td></tr>
       <tr><td style="text-align:right;">
-          <label for='toAccount'>To:</label>
+          <label for='transferData.toAccount'>To:</label>
       </td><td style="text-align:left;">
-          <select ng-model="toAccount">
-            <option ng-repeat="account in accounts" value={{account.accountNumber}}>{{account.accountNickname}}  ${{account.accountBalance}}</option>
+          <select ng-model="transferData.toAccount">
+            <option ng-repeat="account in transferData.accounts" value={{account.accountNumber}}>{{account.accountNickname}}  ${{account.accountBalance}}</option>
           </select>
       </td></tr>
       <tr><td style="text-align:right;">
-          <label for='transferAmount'>Enter an amount:</label>
+          <label for='transferData.transferAmount'>Enter an amount:</label>
       </td><td style="text-align:left;">
-          <input id='transferAmount' type='number' min='0' ng-model='transferAmount'></input>
+          <input id='transferData.transferAmount' type='number' min='0' ng-model='transferData.transferAmount'></input>
       </td></tr>
       <tr><td>
       </td><td style="text-align:left;">

@@ -5,8 +5,8 @@
     <h4>Changes to the model update the page display</h4>
 
 
-  <label for='displayValue'>Enter an item:</label>
-  <input id='displayValue' ng-model='displayValue'></input>
+  <label for='stackData.displayValue'>Enter an item:</label>
+  <input id='displayValue' ng-model='stackData.displayValue'></input>
 
   <p><button ng-click="push()">Push to Stack</button> <button ng-click="pop()">Pop off the Stack</button></p>
 
@@ -18,7 +18,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr ng-repeat="val in stack.demo" id="display-table">
+      <tr ng-repeat="val in stackData.stack.demo" id="display-table">
         <td id="display-table">{{val.value}}</td>
       </tr>
     </tbody>
@@ -28,7 +28,7 @@
 <h4>Page elements can be bound to the same model without calling the controller</h4>
     <!-- Both selectors are bound to the same model, so mirror each other -->
     <p>Tweedledee :&nbsp;&nbsp;
-        <select ng-model="selectorA">
+        <select ng-model="stackData.selectorA">
             <option value='1'>Option 1</option>
             <option value='2'>Option 2</option>
             <option value='3'>Option 3</option>
@@ -36,10 +36,10 @@
             <option value='5'>Option 5</option>
             <option value='6'>Option 6</option>
         </select>
-        <input id='inputValue1' ng-model='inputValue'></input>
+        <input id='inputValue1' ng-model='stackData.inputValue'></input>
     </p>
     <p>Tweedledum :&nbsp;
-        <select ng-model="selectorA">
+        <select ng-model="stackData.selectorA">
             <option value='1'>Option 1</option>
             <option value='2'>Option 2</option>
             <option value='3'>Option 3</option>
@@ -47,6 +47,6 @@
             <option value='5'>Option 5</option>
             <option value='6'>Option 6</option>
         </select>
-        <input id='inputValue2' ng-model='inputValue'></input>
+        <input id='inputValue2' ng-model='stackData.inputValue'></input>
     </p>
 </div>
