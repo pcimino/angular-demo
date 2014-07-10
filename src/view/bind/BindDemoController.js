@@ -4,7 +4,7 @@ angular.module('ControllerModule').controller('BindDemoController',
     'use strict';
     $scope.stackData = {
       'stack': BindDemoModel.getStack()
-    }
+    };
 
     $scope.push = function() {
       if ($scope.stackData.displayValue) {
@@ -19,4 +19,5 @@ angular.module('ControllerModule').controller('BindDemoController',
     };
   }
 );
+
 

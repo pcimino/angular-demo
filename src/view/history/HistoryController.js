@@ -8,14 +8,15 @@ angular.module('ControllerModule').controller('HistoryController',
     $scope.historyData = {
       'account': account,
       'transactions': account.transactions
-    }
+    };
 
     // HACK for the intial deposit
     $scope.historyData.transactions[0].fromAccountName = 'Initial Deposit';
     $scope.historyData.transactions[0].toAccountName = account.nickname;
 
-    
+
     return true;
   }
 );
+
 

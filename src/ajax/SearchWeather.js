@@ -47,3 +47,4 @@ angular.module('AjaxModule').factory('SearchWeather',
   }
 );
 
+
